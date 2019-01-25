@@ -12,7 +12,7 @@
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require dkulyk/nova-card-filter
+composer require dkulyk/nova-filter-card
 ```
 
 ## Usage
