@@ -1,0 +1,55 @@
+<template>
+    <card class="overflow-hidde flex flex-row">
+        <button
+                v-for="option in filter.options"
+                :key="option.value"
+                class="py-4 px-8 border-b-2 focus:outline-none flex-1"
+                :class="[value == option.value ? 'text-grey-black font-bold border-primary': 'text-grey font-semibold border-40']"
+                @click="handleChange(option)"
+        >{{ option.name }}
+        </button>
+    </card>
+</template>
+
+<script>
+export default {
+    props: {
+        card: {
+            required: true,
+        },
+        resourceName: {
+            type: String,
+            required: true,
+        },
+    },
+
+    data: () => ({
+        filterKey: null
+    }),
+
+    created() {
+        this.filterKey = this.card.filter
+    },
+
+    methods: {
+        handleChange(option) {
+            this.$store.commit(`${this.resourceName}/updateFilterState`, {
+                filterClass: this.filterKey,
+                value: option.value,
+            })
+
+            this.$emit('change')
+        },
+    },
+
+    computed: {
+        filter() {
+            return this.$store.getters[`${this.resourceName}/getFilter`](this.filterKey)
+        },
+
+        value() {
+            return this.filter.currentValue
+        },
+    }
+}
+</script>
