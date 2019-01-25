@@ -1,6 +1,6 @@
 ## Laravel Nova Filter Card Package
-[![Latest Version on Github](https://img.shields.io/packagist/v/dkulyk/nova-filter-card.svg?style=flat)](https://packagist.org/packages/dkulyk/nova-card-filter)
-[![Total Downloads](https://img.shields.io/packagist/dt/dkulyk/nova-filter-card.svg?style=flat)](https://packagist.org/packages/dkulyk/nova-card-filter)
+[![Latest Version on Github](https://img.shields.io/packagist/v/dkulyk/nova-filter-card.svg?style=flat)](https://packagist.org/packages/dkulyk/nova-filter-card)
+[![Total Downloads](https://img.shields.io/packagist/dt/dkulyk/nova-filter-card.svg?style=flat)](https://packagist.org/packages/dkulyk/nova-filter-card)
 [![Become a Patron!](https://img.shields.io/badge/become-a_patron!-red.svg?logo=patreon&style=flat)](https://www.patreon.com/bePatron?u=16285116)
 
 
