@@ -1,4 +1,4 @@
-Laravel Nova Filter Card Package
+## Laravel Nova Filter Card Package
 [![Latest Version on Github](https://img.shields.io/packagist/v/dkulyk/nova-card-filter.svg?style=flat)](https://packagist.org/packages/dkulyk/nova-card-filter)
 [![Total Downloads](https://img.shields.io/packagist/dt/dkulyk/nova-card-filter.svg?style=flat)](https://packagist.org/packages/dkulyk/nova-card-filter)
 [![Become a Patron!](https://img.shields.io/badge/become-a_patron!-red.svg?logo=patreon&style=flat)](https://www.patreon.com/bePatron?u=16285116)
