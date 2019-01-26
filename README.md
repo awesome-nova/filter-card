@@ -31,7 +31,7 @@ public function filters()
     ];
 }
 
-public function filters()
+public function cards()
 {
     return [
         // Other cards...,
