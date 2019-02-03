@@ -4,7 +4,7 @@
                 v-for="option in filter.options"
                 :key="option.value"
                 class="py-4 px-8 border-b-2 focus:outline-none flex-1"
-                :class="[value == option.value ? 'text-grey-black font-bold border-primary': 'text-grey font-semibold border-40']"
+                :class="[isActive(option) ? 'text-grey-black font-bold border-primary': 'text-grey font-semibold border-40']"
                 @click="handleChange(option)"
         >{{ option.name }}
         </button>
@@ -40,6 +40,10 @@ export default {
 
             this.$emit('change')
         },
+
+        isActive(option) {
+            return String(this.value) == String(option.value)
+        }
     },
 
     computed: {
