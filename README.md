@@ -1,6 +1,6 @@
 ## Laravel Nova Filter Card Package
-[![Latest Version on Github](https://img.shields.io/packagist/v/dkulyk/nova-filter-card.svg?style=flat)](https://packagist.org/packages/dkulyk/nova-filter-card)
-[![Total Downloads](https://img.shields.io/packagist/dt/dkulyk/nova-filter-card.svg?style=flat)](https://packagist.org/packages/dkulyk/nova-filter-card)
+[![Latest Version on Github](https://img.shields.io/packagist/v/awesome-nova/filter-card.svg?style=flat)](https://packagist.org/packages/awesome-nova/filter-card)
+[![Total Downloads](https://img.shields.io/packagist/dt/awesome-nova/filter-card.svg?style=flat)](https://packagist.org/packages/awesome-nova/filter-card)
 [![Become a Patron!](https://img.shields.io/badge/become-a_patron!-red.svg?logo=patreon&style=flat)](https://www.patreon.com/bePatron?u=16285116)
 
 
@@ -12,7 +12,7 @@
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require dkulyk/nova-filter-card
+composer require awesome-nova/filter-card
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ You need to add card to resource with specified filter.
 
 ```php
 
-use DKulyk\Nova\FilterCard;
+use AwesomeNova\Cards\FilterCard;
 use App\Nova\Filters\StateFilter;
 
 public function filters()

@@ -1,6 +1,6 @@
 <?php
 
-namespace DKulyk\Nova;
+namespace AwesomeNova;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
@@ -17,7 +17,7 @@ class FilterCardServiceProvider extends ServiceProvider
     public function boot()
     {
         Event::listen(ServingNova::class, function () {
-            Nova::script('dkulyk-nova-filter-card', dirname(__DIR__) . '/dist/js/card.js');
+            Nova::script('awesome-nova-filter-card', dirname(__DIR__) . '/dist/js/card.js');
         });
     }
 }

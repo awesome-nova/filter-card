@@ -1,6 +1,6 @@
 <?php
 
-namespace DKulyk\Nova;
+namespace AwesomeNova\Cards;
 
 use Laravel\Nova\Card;
 use Laravel\Nova\Filters\Filter;
@@ -20,7 +20,7 @@ class FilterCard extends Card
      */
     public function __construct($filter)
     {
-        parent::__construct(null);
+        parent::__construct('awesome-nova-filter-card');
 
         if ($filter instanceof Filter) {
             $filter = $filter->key();
@@ -28,19 +28,4 @@ class FilterCard extends Card
 
         $this->withMeta(['filter' => $filter]);
     }
-
-    /**
-     * Get the component name for the element.
-     *
-     * @return string
-     */
-    public function component()
-    {
-        return 'dkulyk-nova-filter-card';
-    }
-
-//    public function authorize(Request $request)
-//    {
-//        return $request instanceof ResourceIndexRequest && parent::authorize($request);
-//    }
 }

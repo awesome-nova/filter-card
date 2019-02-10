@@ -1,9 +1,11 @@
 {
-    "name": "dkulyk/nova-filter-card",
+    "name": "awesome-nova/filter-card",
     "description": "A Laravel Nova card.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "card",
+        "filter"
     ],
     "license": "MIT",
     "require": {
@@ -11,19 +13,14 @@
     },
     "autoload": {
         "psr-4": {
-            "DKulyk\\Nova\\": "src/"
+            "AwesomeNova\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "DKulyk\\Nova\\FilterCardServiceProvider"
+                "AwesomeNova\\FilterCardServiceProvider"
             ]
         }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
