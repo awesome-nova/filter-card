@@ -12,7 +12,11 @@
 </template>
 
 <script>
+import InteractsWithQueryString from 'laravel-nova/src/mixins/InteractsWithQueryString'
+import Filterable from 'laravel-nova/src/mixins/Filterable'
+
 export default {
+    mixins: [InteractsWithQueryString, Filterable],
     props: {
         card: {
             required: true,
@@ -24,7 +28,7 @@ export default {
     },
 
     data: () => ({
-        filterKey: null
+        filterKey: null,
     }),
 
     created() {
@@ -38,12 +42,12 @@ export default {
                 value: option.value,
             })
 
-            this.$emit('change')
+            this.filterChanged()
         },
 
         isActive(option) {
             return String(this.value) == String(option.value)
-        }
+        },
     },
 
     computed: {
@@ -54,6 +58,13 @@ export default {
         value() {
             return this.filter.currentValue
         },
-    }
+
+        /**
+         * Get the name of the page query string variable.
+         */
+        pageParameter() {
+            return this.resourceName + '_page'
+        },
+    },
 }
 </script>
