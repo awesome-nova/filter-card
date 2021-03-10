@@ -3,6 +3,8 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/awesome-nova/filter-card.svg?style=flat)](https://packagist.org/packages/awesome-nova/filter-card)
 [![Become a Patron!](https://img.shields.io/badge/become-a_patron!-red.svg?logo=patreon&style=flat)](https://www.patreon.com/bePatron?u=16285116)
 
+> This fork has only changed some CSS classes.
+
 
 1. [Installation](#user-content-installation)
 2. [Usage](#user-content-usage)
@@ -12,7 +14,7 @@
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require awesome-nova/filter-card
+composer require marcoraddatz-nova/filter-card
 ```
 
 ## Usage
