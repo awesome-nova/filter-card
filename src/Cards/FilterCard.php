@@ -28,4 +28,18 @@ class FilterCard extends Card
 
         $this->withMeta(['filter' => $filter]);
     }
+
+    public function showAsSelect($show_as_select = true)
+    {
+        $this->withMeta(['show_as_select' => $show_as_select]);
+
+        return $this;
+    }
+
+    public function hideSelectHeading($hide_select_heading = true)
+    {
+        $this->withMeta(['hide_select_heading' => $hide_select_heading]);
+
+        return $this;
+    }
 }

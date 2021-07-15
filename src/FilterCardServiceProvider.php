@@ -18,6 +18,7 @@ class FilterCardServiceProvider extends ServiceProvider
     {
         Event::listen(ServingNova::class, function () {
             Nova::script('awesome-nova-filter-card', dirname(__DIR__) . '/dist/js/card.js');
+            Nova::style('awesome-nova-filter-card', dirname(__DIR__) . '/dist/css/card.css');
         });
     }
 }
