@@ -9,13 +9,20 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "laravel/nova":"^4.0"
     },
     "autoload": {
         "psr-4": {
             "AwesomeNova\\": "src/"
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
     "extra": {
         "laravel": {
             "providers": [

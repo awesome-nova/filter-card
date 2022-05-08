@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import InteractsWithQueryString from 'laravel-nova/src/mixins/InteractsWithQueryString'
-import Filterable from 'laravel-nova/src/mixins/Filterable'
+import InteractsWithQueryString from '@/mixins/InteractsWithQueryString'
+import Filterable from '@/mixins/Filterable'
 
 export default {
     mixins: [InteractsWithQueryString, Filterable],
