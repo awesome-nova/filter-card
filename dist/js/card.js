@@ -37,6 +37,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     handleChange: function handleChange(option) {
+      //console.log(this.card.filter)
       this.$store.commit("".concat(this.resourceName, "/updateFilterState"), {
         filterClass: this.filterKey,
         value: option.value
@@ -95,7 +96,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           onClick: function onClick($event) {
             return $options.handleChange(option);
           }
-        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(option.name), 11
+        }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(option.label), 11
         /* TEXT, CLASS, PROPS */
         , _hoisted_1);
       }), 128
@@ -322,6 +323,8 @@ var compiledSearchParams = null;
      */
     updateQueryString: function updateQueryString(value) {
       var searchParams = new URLSearchParams(window.location.search);
+      console.log(Object.keys(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia));
+      console.log(_inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia);
       var page = _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia.page;
       lodash_forEach__WEBPACK_IMPORTED_MODULE_0___default()(value, function (v, i) {
         searchParams.set(i, v || '');

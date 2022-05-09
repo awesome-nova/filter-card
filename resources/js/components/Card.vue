@@ -6,7 +6,7 @@
                 class="py-4 px-8 border-b-2 focus:outline-none flex-1"
                 :class="[isActive(option) ? 'text-grey-black font-bold border-primary': 'text-grey font-semibold border-40']"
                 @click="handleChange(option)"
-        >{{ option.name }}
+        >{{ option.label }}
         </button>
     </card>
 </template>
@@ -37,16 +37,19 @@ export default {
 
     methods: {
         handleChange(option) {
+            //console.log(this.card.filter)
+
             this.$store.commit(`${this.resourceName}/updateFilterState`, {
                 filterClass: this.filterKey,
                 value: option.value,
             })
 
             this.filterChanged()
-        },
+            
+         },
 
         isActive(option) {
-            return String(this.value) == String(option.value)
+            return String(this.value) == String(option.value);
         },
     },
 
@@ -56,15 +59,16 @@ export default {
         },
 
         value() {
-            return this.filter.currentValue
+            return this.filter.currentValue;
         },
 
         /**
          * Get the name of the page query string variable.
          */
         pageParameter() {
-            return this.resourceName + '_page'
+            return this.resourceName + '_page';
         },
     },
+    
 }
 </script>
