@@ -28,4 +28,14 @@ class FilterCard extends Card
 
         $this->withMeta(['filter' => $filter]);
     }
+
+    /**
+     * Get the component name for the element.
+     *
+     * @return string
+     */
+    public function component()
+    {
+        return 'awesome-nova-filter-card';
+    }
 }
