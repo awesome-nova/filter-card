@@ -35,6 +35,9 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.filterKey = this.card.filter;
   },
+  mounted: function mounted() {
+    this.$el.classList.remove("min-h-40");
+  },
   methods: {
     handleChange: function handleChange(option) {
       this.$store.commit("".concat(this.resourceName, "/updateFilterState"), {

@@ -40,6 +40,10 @@ export default {
     this.filterKey = this.card.filter;
   },
 
+  mounted() {
+    this.$el.classList.remove("min-h-40");
+  },
+  
   methods: {
 
     handleChange(option) {
