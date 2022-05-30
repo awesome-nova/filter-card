@@ -6,9 +6,9 @@
       class="py-4 px-8 border-b-2 focus:outline-none flex-1"
       :class="[
         isActive(option)
-          ? getStatusStyle(option)
+          ? getUnderlineStyle(option)
           : 'text-grey font-semibold border-40',
-        statusStyle
+        getStatusStyle(option)
       ]"
       @click="handleChange(option)"
     >
@@ -62,18 +62,34 @@ export default {
     getStatusStyle(option) {
       switch (String(option.value)) {
         case "pending":
-          return "text-white bg-yellow-500 hover:bg-yellow-600 font-medium rounded-lg text-sm dark:focus:ring-yellow-900";
+          return "hover:text-white hover:bg-yellow-600 font-medium text-sm dark:focus:ring-yellow-900";
 
         case "active":
-          return "text-white bg-purple-700 hover:bg-purple-800 font-medium rounded-lg text-sm dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900";
+          return "hover:text-white hover:bg-purple-800 font-medium text-sm dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900";
 
         case "delivered":
-          return "text-white bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800";
+          return "hover:text-white hover:bg-green-800 font-medium text-sm dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800";
 
         case "canceled":
-          return "focus:outline-none text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900";
+          return "hover:text-white hover:bg-red-800 font-medium text-sm dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900";
       }
     },
+
+    getUnderlineStyle(option) {
+      switch (String(option.value)) {
+        case "pending":
+          return "border-b-4 border-yellow-600 border-solid ";
+
+        case "active":
+          return "border-b-4 border-purple-800 border-solid";
+
+        case "delivered":
+          return "border-b-4 border-green-800 border-solid";
+
+        case "canceled":
+          return "border-b-4 border-red-800 border-solid";
+      }
+    }
   },
 
   computed: {
