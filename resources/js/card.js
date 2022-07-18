@@ -1,3 +1,4 @@
 Nova.booting((Vue) => {
-    Vue.component('awesome-nova-filter-card', require('./components/Card'))
-})
+  Vue.component("AwesomeNovaFilterCard", require("./components/Card").default);
+  Nova.inertia("AwesomeNovaFilterCard", require("./components/Card").default);
+});
